@@ -38,24 +38,16 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     PRICE_FILE = None
 
-# class LocalDevelopmentConfig(Config):
-#     SQLITE_DB_DIR = os.path.join(basedir)
-#     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(SQLITE_DB_DIR, "toolcodes.sqlite3")
-#     PRICE_FILE = pd.read_excel("./static/assets/tool_price.xlsx")
-#     SUM = pd.read_excel(open('./static/assets/tool_price.xlsx', 'rb'), sheet_name='Sheet3')  
-
-#     DEBUG = True
-
 # add swagger tags that are used for endpoint annotation
-tags = [
-            {'name': 'Test Methods',
-             'description': 'Methods for testing the API.'
-            },
-            {'name': 'Calculation Methods',
-             'description': 'Methods for calculating data.'
-            },
-       ]
+# tags = [
+#             {'name': 'Descrição dos métodos',
+#              'description': 'Methods for testing the API.'
+#             },
+#             {'name': 'Calculation Methods',
+#              'description': 'Methods for calculating data.'
+#             },
+#        ]
 
-for tag in tags:
-    print(f"Adding tag: {tag['name']}")
-    spec.tag(tag)
+# for tag in tags:
+#     print(f"Adding tag: {tag['name']}")
+#     spec.tag(tag)
